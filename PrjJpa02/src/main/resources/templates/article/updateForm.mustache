@@ -1,0 +1,17 @@
+{{>layout/header}}
+ 
+<form class="container" action="/article/Update" method="post">
+	 <input type="hidden" name="id" value="{{article.id}}">
+   <div class="mb-3">
+     <label for="title" class="form-label">제목</label>
+     <input id="title" type="text" name="title" class="form-control" value="{{article.title}}" />
+   </div>
+   <div class="mb-3">
+     <label for="content" class="form-label">내용</label>
+     <textarea id="content" class="form-control" name="content" rows="3">{{article.content}}</textarea>
+   </div>
+   <button type="submit" class="btn btn-primary">글수정</button>
+   <a href="/article/List" class="btn btn-secondary">목록</a>
+</form>     
+      
+{{>layout/footer}}
